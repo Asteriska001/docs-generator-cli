@@ -1,6 +1,6 @@
 {
   "name": "docs-generator-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Command line interface for generate doc.md files",
   "main": "lib/index.js",
   "dependencies": {
@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "eslint src",
     "build": "tsc",
-    "prettier": "prettier \"**/*.{js,md,json}\"",
+    "prettier": "prettier \"**/*.{ts,md,json}\"",
     "prettier:check": "npm run prettier -- --check",
     "prettier:fix": "npm run prettier -- --write",
     "start": "node lib/index.js"

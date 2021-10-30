@@ -1,6 +1,6 @@
 const generate = require('./generate')
 const infos = require('./project-infos')
-const { showEndMessage } = require('./utils');
+const { showEndMessage } = require('./utils')
 const path = require('path')
 const askQuestions = require('./ask-questions')
 

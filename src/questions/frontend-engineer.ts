@@ -1,6 +1,6 @@
-module.exports = (projectInfos:projectSpace.projectInfos) => ({
+module.exports = (projectInfos: projectSpace.projectInfos) => ({
   type: 'input',
   message: '🧑‍🚀   前端',
   name: 'frontendEngineer',
-  default: projectInfos.frontendEngineer,
+  default: projectInfos.frontendEngineer
 })

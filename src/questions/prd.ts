@@ -1,6 +1,6 @@
-module.exports = (projectInfos:projectSpace.projectInfos) => ({
+module.exports = (projectInfos: projectSpace.projectInfos) => ({
   type: 'input',
   message: '📘  需求文档',
   name: 'prd',
-  default: projectInfos.prd,
+  default: projectInfos.prd
 })

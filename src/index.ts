@@ -7,7 +7,7 @@ const mainProcess = require('./cli')
 
 yargs
   .usage('Usage: $0 <command> [options]')
-  .command('$0', 'Generate doc.md', noop, (args:any) => {
+  .command('$0', 'Generate doc.md', noop, (args: any) => {
     const { path: customTemplatePath, yes: useDefaultAnswers } = args
     mainProcess({ customTemplatePath, useDefaultAnswers })
   })

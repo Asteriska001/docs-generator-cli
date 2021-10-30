@@ -59,9 +59,6 @@
 <% if (yapiUrl) { -%>
 * [YAPI mock接口文档](<%= yapiUrl %>)
 <% } -%>
-<% if (frontendGitUrl) { -%>
-*[前端仓库](<%= frontendGitUrl %>)
-<% } -%>
 <% if (swagger || backendGitUrl || backendProjectDoc) { -%>
 * 服务端相关
     - [Swagger](<%= swagger %>)

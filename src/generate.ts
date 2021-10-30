@@ -55,12 +55,12 @@ const buildDocContent = async (context: object, templatePath: string) => {
   return ejs.render(template, {
     filename: templatePath,
     currentYear,
-    ...context,
+    ...context
   })
 }
 
 module.exports = {
   writeDoc,
   buildDocContent,
-  DOC_PATH,
+  DOC_PATH
 }
