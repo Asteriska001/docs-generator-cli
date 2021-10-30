@@ -71,12 +71,23 @@
 
 ## ⭐️ 主流程目录
 
-* 需求拆分
-* 非功能需求(埋点，渠道码等)
-* 资源需求
+<% if (prdSplit) { -%>
+* 需求拆分：React<%= prdSplit %>
+<% } -%>
+<% if (nonfunctionalRequirements) { -%>
+* 非功能需求(埋点，渠道码等)：React<%= nonfunctionalRequirements %>
+<% } -%>
+<% if (resourceNeeds) { -%>
+* 资源需求：React<%= resourceNeeds %>
+<% } -%>
 
 
 ## ⭐️ 测试方案
 
-* 影响范围
-* 注意事项：一些特别需要注意的情况或逻辑的说明
+<% if (influence) { -%>
+* 影响范围：React<%= influence %>
+<% } -%>
+
+<% if (notice) { -%>
+* 注意事项：一些特别需要注意的情况或逻辑的说明：React<%= notice %>
+<% } -%>

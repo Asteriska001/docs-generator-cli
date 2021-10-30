@@ -14,12 +14,20 @@
   
       frontendEngineer?: string
       repositoryUrl?:string
+
+      influence?: string
   
       mainProcess?:string
       miniappPath?:string
+
+      nonfunctionalRequirements?:string
+      notice?:string
   
       prd?:string
+      prdSplit?:string
       productManager?:string
+
+      resourceNeeds?:string
   
       name?:string
       swagger?:string

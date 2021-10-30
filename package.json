@@ -1,6 +1,6 @@
 {
   "name": "docs-generator-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Command line interface for generate doc.md files",
   "main": "lib/index.js",
   "dependencies": {
@@ -42,6 +42,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cderek/docs-generator-cli.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/cderek"
   },
   "keywords": [
     "cli",

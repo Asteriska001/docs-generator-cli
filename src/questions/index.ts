@@ -24,4 +24,11 @@ module.exports = {
   askBackendProjectDoc: require('./backend-project-doc'),
 
   askMainProcess: require('./main-process'),
+
+  askPrdSplit: require('./prd-split'),
+  askNonfunctionalRequirements: require('./nonfunctional-requirements'),
+  askResourceNeeds: require('./resource-needs'),
+
+  askInfluence: require('./influence'),
+  askNotice: require('./notice'),
 }
