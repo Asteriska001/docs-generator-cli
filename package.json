@@ -1,0 +1,58 @@
+{
+  "name": "docs-generator-cli",
+  "version": "0.0.3",
+  "description": "Command line interface for generate doc.md files",
+  "main": "lib/index.js",
+  "dependencies": {
+    "boxen": "^4.0.0",
+    "date-fns": "^2.0.1",
+    "ejs": "^3.0.1",
+    "git-repo-name": "^1.0.1",
+    "inquirer": "~7.0.0",
+    "load-json-file": "^6.0.0",
+    "lodash": "^4.17.11",
+    "ora": "4.0.3",
+    "parse-github-url": "^1.0.2",
+    "yargs": "^15.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "node-fetch": "^3.0.0",
+    "prettier": "^1.17.1",
+    "tslib": "^2.3.1"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "build": "tsc",
+    "prettier": "prettier \"**/*.{js,md,json}\"",
+    "prettier:check": "npm run prettier -- --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "start": "node lib/index.js"
+  },
+  "bin": {
+    "docs-generator-cli": "lib/index.js"
+  },
+  "files": [
+    "lib/",
+    "templates/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cderek/docs-generator-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "generator",
+    "markdown",
+    "docs"
+  ],
+  "author": "cderek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cderek/docs-generator-cli/issues"
+  },
+  "homepage": "https://github.com/cderek/docs-generator-cli#readme"
+}
