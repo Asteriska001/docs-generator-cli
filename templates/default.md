@@ -41,7 +41,7 @@
     - 小程序路径：<%= miniappPath %>
 <% } -%>
 <% if (webUrl) { -%>
-    - web路径：<%= webUrl %>
+    - web url：<%= webUrl %>
 <% } -%>
 
 

@@ -18,7 +18,7 @@
 * 终端：H5
 * 访问入口
     - 小程序路径：无
-    - web路径：https://www.google.com/
+    - web url：https://www.google.com/
 
 
   
@@ -36,7 +36,7 @@
 
 ## ⭐️ 主流程目录
 
-* 需求拆分：https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards
+* 需求拆分：暂无
 * 非功能需求(埋点，渠道码等)：埋点
 * 资源需求：无
 
