@@ -23,7 +23,7 @@
 
 ## 💡 技术选型
 <% if (developmentLib) { -%>
-* 技术栈：React<%= developmentLib %>
+* 技术栈：<%= developmentLib %>
 <% } -%>
 <% if (buildTarget) { -%>
 * 构建目标：<%= buildTarget %>
@@ -32,16 +32,16 @@
 
 ## 👉 访问环境
 <% if (terminalEquipment) { -%>
-* 终端：React<%= terminalEquipment %>
+* 终端：<%= terminalEquipment %>
 <% } -%>
 <% if (miniappPath || webUrl) { -%>
 * 访问入口
 <% } -%>
 <% if (miniappPath) { -%>
-    - 小程序路径：React<%= miniappPath %>
+    - 小程序路径：<%= miniappPath %>
 <% } -%>
 <% if (webUrl) { -%>
-    - web路径：React<%= webUrl %>
+    - web路径：<%= webUrl %>
 <% } -%>
 
 
@@ -72,22 +72,22 @@
 ## ⭐️ 主流程目录
 
 <% if (prdSplit) { -%>
-* 需求拆分：React<%= prdSplit %>
+* 需求拆分：<%= prdSplit %>
 <% } -%>
 <% if (nonfunctionalRequirements) { -%>
-* 非功能需求(埋点，渠道码等)：React<%= nonfunctionalRequirements %>
+* 非功能需求(埋点，渠道码等)：<%= nonfunctionalRequirements %>
 <% } -%>
 <% if (resourceNeeds) { -%>
-* 资源需求：React<%= resourceNeeds %>
+* 资源需求：<%= resourceNeeds %>
 <% } -%>
 
 
 ## ⭐️ 测试方案
 
 <% if (influence) { -%>
-* 影响范围：React<%= influence %>
+* 影响范围：<%= influence %>
 <% } -%>
 
 <% if (notice) { -%>
-* 注意事项：一些特别需要注意的情况或逻辑的说明：React<%= notice %>
+* 注意事项：一些特别需要注意的情况或逻辑的说明：<%= notice %>
 <% } -%>

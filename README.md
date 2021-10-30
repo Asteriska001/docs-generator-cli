@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to docs-generator-cli </h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-v0.0.3-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-v0.0.5-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > 根据模板生成Markdown格式的项目文档
