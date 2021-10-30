@@ -1,11 +1,16 @@
 const ejs = require('ejs')
 import ora = require('ora')
+const path = require('path')
 const { promisify } = require('util')
 const { getYear } = require('date-fns')
 const fs = require('fs')
-const { unescape } = require('lodash')
+const { isNil, unescape } = require('lodash')
+const chooseTemplate = require('./choose-template')
 
-const DOC_PATH = 'DOC.md'
+const DOC_PATH = 'doc.md'
+
+const newTemplate = path.resolve(__dirname, '../templates/new.md')
+const iterationTemplate = path.resolve(__dirname, '../templates/iteration.md')
 
 /**
  * Create doc file from the given docContent
@@ -59,8 +64,41 @@ const buildDocContent = async (context: object, templatePath: string) => {
   })
 }
 
+/**
+ * 校验模板路径
+ *
+ * @param {string} templatePath
+ */
+const validateDocTemplatePath = (templatePath: string) => {
+  const spinner = ora('文档模板路径解析中...').start()
+
+  try {
+    fs.lstatSync(templatePath).isFile()
+  } catch (err) {
+    spinner.fail(`模板路径 '${templatePath}' 不符合规范.`)
+    throw err
+  }
+
+  spinner.succeed('文档模板路径已解析')
+}
+
+/**
+ * 或许文档模板路径
+ *
+ * @param {String} customTemplate
+ */
+const getTemplatePath = async (customTemplate: any) => {
+  const templateType = await chooseTemplate() == 'new' ? newTemplate : iterationTemplate
+  const templatePath = isNil(customTemplate) ? templateType : customTemplate
+
+  validateDocTemplatePath(templatePath)
+  return templatePath
+}
+
+
 module.exports = {
   writeDoc,
   buildDocContent,
   DOC_PATH,
+  getTemplatePath,
 }

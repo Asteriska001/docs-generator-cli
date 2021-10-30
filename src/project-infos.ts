@@ -39,7 +39,7 @@ const getProjectInfos = async () => {
   const packageJson = await getPackageJson()
   const name = getProjectName(packageJson)
   const repositoryUrl = await getReposUrlFromPackageJson(packageJson)
-  spinner.succeed('🦄 项目基本信息')
+  spinner.succeed('🦄  项目基本信息')
 
   return {
     name,
