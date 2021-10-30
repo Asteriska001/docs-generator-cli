@@ -9,14 +9,10 @@ const { flatMap } = require('lodash')
 const questionsBuilders = require('./questions')
 const utils = require('./utils')
 
-module.exports = async (
-  projectInfos: projectSpace.projectInfos,
-  useDefaultAnswers: any
-) => {
+module.exports = async (projectInfos: projectSpace.projectInfos, useDefaultAnswers: any) => {
   const questions = flatMap(
     Object.values(questionsBuilders),
-    (questionBuilder: (arg0: projectSpace.projectInfos) => any) =>
-      questionBuilder(projectInfos)
+    (questionBuilder: (arg0: projectSpace.projectInfos) => any) => questionBuilder(projectInfos)
   )
 
   const answersContext = useDefaultAnswers
@@ -25,6 +21,6 @@ module.exports = async (
 
   return {
     repositoryUrl: projectInfos.repositoryUrl,
-    ...answersContext
+    ...answersContext,
   }
 }

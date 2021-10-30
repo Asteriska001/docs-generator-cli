@@ -17,14 +17,8 @@ const askQuestions = require('./ask-questions')
 module.exports = async ({ useDefaultAnswers }: any) => {
   const templatePath = path.resolve(__dirname, '../templates/default.md')
   const projectInformations = await infos.getProjectInfos()
-  const answersContext = await askQuestions(
-    projectInformations,
-    useDefaultAnswers
-  )
-  const docContent = await generate.buildDocContent(
-    answersContext,
-    templatePath
-  )
+  const answersContext = await askQuestions(projectInformations, useDefaultAnswers)
+  const docContent = await generate.buildDocContent(answersContext, templatePath)
 
   await generate.writeDoc(docContent)
 

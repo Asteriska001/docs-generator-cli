@@ -11,7 +11,7 @@ const BOXEN_CONFIG = {
   margin: { top: 2, bottom: 3 },
   borderColor: 'cyan',
   align: 'center',
-  borderStyle: 'double'
+  borderStyle: 'double',
 }
 
 /**
@@ -24,8 +24,7 @@ const showEndMessage = () => process.stdout.write(boxen(END_MSG, BOXEN_CONFIG))
  *
  * @param {Object} packageJson
  */
-const getPackageJsonName = (packageJson: packageSpace.packageJson = {}) =>
-  packageJson.name || undefined
+const getPackageJsonName = (packageJson: packageSpace.packageJson = {}) => packageJson.name || undefined
 /**
  * Get git repository name
  *
@@ -45,11 +44,7 @@ const getGitRepositoryName = (cwd: string) => {
  */
 const getProjectName = (packageJson: packageSpace.packageJson) => {
   const cwd = process.cwd()
-  return (
-    getPackageJsonName(packageJson) ||
-    getGitRepositoryName(cwd) ||
-    path.basename(cwd)
-  )
+  return getPackageJsonName(packageJson) || getGitRepositoryName(cwd) || path.basename(cwd)
 }
 
 /**
@@ -73,9 +68,7 @@ const getDefaultAnswer = async (question: any, answersContext: any) => {
 
   switch (question.type) {
     case 'input':
-      return typeof question.default === 'function'
-        ? question.default(answersContext)
-        : question.default || ''
+      return typeof question.default === 'function' ? question.default(answersContext) : question.default || ''
     case 'checkbox':
       return question.choices
         .filter((choice: { checked: any }) => choice.checked)
@@ -96,7 +89,7 @@ const getDefaultAnswers = (questions: Array<any>) =>
 
     return {
       ...answersContext,
-      [question.name]: await getDefaultAnswer(question, answersContext)
+      [question.name]: await getDefaultAnswer(question, answersContext),
     }
   }, Promise.resolve({}))
 
@@ -107,5 +100,5 @@ module.exports = {
   END_MSG,
   BOXEN_CONFIG,
   getDefaultAnswers,
-  getDefaultAnswer
+  getDefaultAnswer,
 }

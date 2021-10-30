@@ -30,5 +30,5 @@ module.exports = {
   askResourceNeeds: require('./resource-needs'),
 
   askInfluence: require('./influence'),
-  askNotice: require('./notice')
+  askNotice: require('./notice'),
 }

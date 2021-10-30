@@ -1,7 +1,7 @@
 import ora = require('ora')
 const parse = require('parse-github-url')
 const { getPackageJson, getProjectName } = require('./utils')
-const isObject = (val: Object) => val !== null && typeof val === 'object'
+const isObject = (val: unknown) => val !== null && typeof val === 'object'
 const isString = (val: string) => val !== '' && typeof val === 'string'
 
 /**
@@ -9,11 +9,7 @@ const isString = (val: string) => val !== '' && typeof val === 'string'
  *
  * @param {string} reposUrl
  */
-const getReposUrlFromPackageJson = async (pkg: {
-  repository: any
-  homepage: any
-  bugs: { url: any }
-}) => {
+const getReposUrlFromPackageJson = async (pkg: { repository: any; homepage: any; bugs: { url: any } }) => {
   if (!isObject(pkg)) {
     return null
   }
@@ -47,10 +43,10 @@ const getProjectInfos = async () => {
 
   return {
     name,
-    repositoryUrl
+    repositoryUrl,
   }
 }
 
 module.exports = {
-  getProjectInfos
+  getProjectInfos,
 }

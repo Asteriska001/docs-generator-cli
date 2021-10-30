@@ -1,7 +1,7 @@
 {
   "name": "docs-generator-cli",
   "version": "0.0.6",
-  "description": "Command line interface for generate doc.md files",
+  "description": "🦊 Command line interface for generate doc.md files",
   "main": "lib/index.js",
   "dependencies": {
     "boxen": "^4.0.0",
@@ -17,19 +17,22 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "eslint": "^8.1.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.17.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "node-fetch": "^3.0.0",
-    "prettier": "^1.17.1",
-    "tslib": "^2.3.1"
+    "prettier": "^1.19.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
   },
   "scripts": {
-    "lint": "eslint src",
     "build": "tsc",
     "prettier": "prettier \"**/*.{ts,md,json}\"",
     "prettier:check": "npm run prettier -- --check",
     "prettier:fix": "npm run prettier -- --write",
+    "lint": "eslint --ext .ts, src",
     "start": "node lib/index.js"
   },
   "bin": {
