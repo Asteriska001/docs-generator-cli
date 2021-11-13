@@ -6,7 +6,7 @@
 > 根据模板生成 Markdown 格式的项目文档
 
 ## Install
-#####全局安装
+##### 全局安装
 
 ```sh
 npm install docs-generator-cli -D
@@ -20,7 +20,7 @@ docs-generator-cli
  npx docs-generator-cli
 ```
 
-###[查看示例][1]
+### [查看示例][1]
 
 
   [1]: https://github.com/cderek/docs-generator-cli/blob/master/DOC.md
