@@ -1,6 +1,6 @@
 {
   "name": "docs-generator-cli",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "🦊 Command line interface for generate doc.md files",
   "main": "lib/index.js",
   "dependencies": {
