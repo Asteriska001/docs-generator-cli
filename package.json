@@ -39,23 +39,15 @@
   "bin": {
     "docs-generator-cli": "lib/index.js"
   },
-  "files": [
-    "lib/",
-    "templates/"
-  ],
+  "files": ["lib/", "templates/"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cderek/docs-generator-cli.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/cderek"
+    "registry": "https://registry.npmjs.org/"
   },
-  "keywords": [
-    "cli",
-    "generator",
-    "markdown",
-    "docs"
-  ],
+  "keywords": ["cli", "generator", "markdown", "docs"],
   "author": "cderek",
   "license": "ISC",
   "bugs": {
