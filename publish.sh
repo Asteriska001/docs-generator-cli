@@ -34,5 +34,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   git push
   
   # publish
-  npm publish
+  npm publish --access=public
 fi

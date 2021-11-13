@@ -41,7 +41,7 @@
     - 小程序路径：<%= miniappPath %>
 <% } -%>
 <% if (webUrl) { -%>
-    - web 地址：<%= webUrl %>
+    - web地址：<%= webUrl %>
 <% } -%>
 
 
@@ -61,8 +61,8 @@
 <% } -%>
 <% if (swagger || backendGitUrl || backendProjectDoc) { -%>
 * 服务端相关
-    - [Swagger](<%= swagger %>)
-    - [git地址](<%= backendGitUrl %>)
+    - [接口文档](<%= swagger %>)
+    - [后端仓库](<%= backendGitUrl %>)
     - [服务端技术方案](<%= backendProjectDoc %>)
 <% } -%>
 
