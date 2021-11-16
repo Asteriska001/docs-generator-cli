@@ -14,7 +14,7 @@ docs-generator-cli
 ```
 
 ## npx
-##### 或者使用npx，前提是确保已经安装了npx (npm 5.2.0以后版本自带npx命令)
+##### npm 5.2+ 也可在不全局安装的情况下使用：
 
 ```sh
  npx docs-generator-cli
